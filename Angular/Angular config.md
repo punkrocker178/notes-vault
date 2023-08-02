@@ -1,2 +1,2 @@
-angular.json
-tsconfig.json
+`angular.json`
+`tsconfig.json`
