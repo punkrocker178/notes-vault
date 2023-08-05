@@ -25,8 +25,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Angular DI.md",
+                "file": "Angular/Unit testing.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               }
             }
@@ -98,14 +99,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Angular DI.md",
+                "file": "Angular/Unit testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Angular DI.md",
+                "file": "Angular/Unit testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Angular DI.md"
+                "file": "Angular/Unit testing.md"
               }
             }
           }
@@ -146,8 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,12 +162,14 @@
   "active": "d8a455f5f512213d",
   "lastOpenFiles": [
     "Angular/Angular config.md",
+    "Angular/Unit testing.md",
+    "Angular/Angular DI.md",
+    "Angular/Basic concepts.md",
     "Docker commands.md",
     "Algo/Hash set.md",
     "Git commands.md",
     "2023-08-02.md",
     "img/hierarchical-injectors.png",
-    "Angular/Angular DI.md",
     "Angular",
     "Algo/2 Pointers.md",
     "Algo/Linked list.md",
