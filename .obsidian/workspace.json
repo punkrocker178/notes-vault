@@ -13,13 +13,26 @@
             "state": {
               "type": "diff-view",
               "state": {
-                "file": "Angular/Angular config.md",
+                "file": ".obsidian/workspace.json",
                 "staged": false,
-                "hash": "596e6ab67f43c4d43d17f6643b80a3d6ae194716"
+                "hash": "60b103fd856f8ae436150a89bf5e6caf1a0f6218"
+              }
+            }
+          },
+          {
+            "id": "11c8ed82a9067112",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           },
           {
@@ -150,23 +167,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6a39c653e8c0c08",
+  "active": "11c8ed82a9067112",
   "lastOpenFiles": [
-    "Angular/Angular config.md",
-    "Angular/Angular DI.md",
-    "Docker commands.md",
-    "Algo/Hash set.md",
-    "Git commands.md",
-    "2023-08-02.md",
-    "img/hierarchical-injectors.png",
-    "Angular",
-    "Algo/2 Pointers.md",
-    "Algo/Linked list.md",
-    "Algo/Sliding window.md",
-    "Algo",
-    "Untitled.canvas",
-    "img/injectors.png",
-    "img",
-    "New folder"
   ]
 }
