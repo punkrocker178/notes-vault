@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "96a12bfcff2f2992",
+        "id": "2dff2005fe0a6baa",
         "type": "tabs",
         "children": [
           {
-            "id": "dbe9a975ac54c098",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false,
-                "hash": "60b103fd856f8ae436150a89bf5e6caf1a0f6218"
-              }
-            }
-          },
-          {
-            "id": "11c8ed82a9067112",
+            "id": "02556f19259d1ead",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Angular/Basic concepts.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Angular/Basic concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Angular/Basic concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Angular/Basic concepts.md"
               }
             }
           },
@@ -167,7 +155,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "11c8ed82a9067112",
+  "active": "53ffb7d4cbf37cb7",
   "lastOpenFiles": [
+    "Angular/Angular DI.md",
+    "Angular/Angular config.md",
+    "Algo/2 Pointers.md",
+    "conflict-files-obsidian-git.md",
+    "Docker commands.md",
+    "img/hierarchical-injectors.png",
+    "Git commands.md",
+    "Algo/Sliding window.md",
+    "Algo/Linked list.md",
+    "Algo/Hash set.md",
+    "Angular/Unit testing.md",
+    "Angular/Basic concepts.md",
+    "2023-08-02.md",
+    "Angular",
+    "Algo",
+    "Untitled.canvas",
+    "img/injectors.png",
+    "img",
+    "New folder"
   ]
 }
