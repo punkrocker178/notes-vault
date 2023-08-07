@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Angular/Basic concepts.md",
+                "file": "RxJS.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Angular/Basic concepts.md",
+                "file": "RxJS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Angular/Basic concepts.md",
+                "file": "RxJS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Angular/Basic concepts.md"
+                "file": "RxJS.md"
               }
             }
           },
@@ -155,8 +155,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "53ffb7d4cbf37cb7",
+  "active": "02556f19259d1ead",
   "lastOpenFiles": [
+    "Angular/Basic concepts.md",
+    "RxJS.md",
     "Angular/Angular DI.md",
     "Angular/Angular config.md",
     "Algo/2 Pointers.md",
@@ -168,7 +170,6 @@
     "Algo/Linked list.md",
     "Algo/Hash set.md",
     "Angular/Unit testing.md",
-    "Angular/Basic concepts.md",
     "2023-08-02.md",
     "Angular",
     "Algo",
