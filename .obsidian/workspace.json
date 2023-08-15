@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "73cb74afb1fee7df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dotnet commands.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -65,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RxJS.md",
+                "file": "dotnet commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RxJS.md",
+                "file": "dotnet commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RxJS.md"
+                "file": "dotnet commands.md"
               }
             }
           },
@@ -155,15 +167,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02556f19259d1ead",
+  "active": "b6a39c653e8c0c08",
   "lastOpenFiles": [
+    "Docker commands.md",
     "RxJS.md",
+    "dotnet commands.md",
     "Angular/Basic concepts.md",
     "Angular/Angular DI.md",
     "Angular/Angular config.md",
     "Algo/2 Pointers.md",
     "conflict-files-obsidian-git.md",
-    "Docker commands.md",
     "img/hierarchical-injectors.png",
     "Git commands.md",
     "Algo/Sliding window.md",
