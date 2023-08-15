@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RxJS.md",
+                "file": "Docker commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -170,13 +170,13 @@
   "active": "b6a39c653e8c0c08",
   "lastOpenFiles": [
     "Docker commands.md",
+    "conflict-files-obsidian-git.md",
     "RxJS.md",
     "dotnet commands.md",
     "Angular/Basic concepts.md",
     "Angular/Angular DI.md",
     "Angular/Angular config.md",
     "Algo/2 Pointers.md",
-    "conflict-files-obsidian-git.md",
     "img/hierarchical-injectors.png",
     "Git commands.md",
     "Algo/Sliding window.md",
