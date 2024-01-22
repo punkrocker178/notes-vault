@@ -2,12 +2,12 @@
 
 In order to unit test a component, we have to define test cases in `.spec.ts` file.
 We should let the `spec` file have the same name as the component we want testing.
-Default unit testing tool is `jasmine`
+Default unit testing framework is `Jasmine`
 
 ### Preparations for for the testing component
 
-Tested component is initialized and ran in an encapsulated environment (jasmine server) and not related to any modules. Therefore, we have to import/provide nessessary modules/services & other dendencies for the component to run.
-The general rule of thumb is to mock the denpendencies as many as possible, as we only need to test our logic within the scope of this component.
+Tested component is initialized and ran in an encapsulated environment (jasmine server) and not related to any modules. Therefore, we have to import/provide necessary modules/services & other dependencies for the component to run.
+The general rule of thumb is to mock the dependencies as many as possible, as we only need to test our logic within the scope of this component.
 Below is the code to setup our test component.
 
 ```typescript

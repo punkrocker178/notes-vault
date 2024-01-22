@@ -1,5 +1,5 @@
 Dependency providers:
-- `useClass` : 
+- `useClass`  
 
 - `useExisting`
 
