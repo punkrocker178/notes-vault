@@ -1,4 +1,4 @@
-# v15
+# v15 (done)
 - Standalone components -> Lazy loading route
 - Better stack traces
 - NgOptimizedImage
@@ -15,4 +15,5 @@
 - esbuild
 - Built-in templates
 - Defferable views​
-- Material Design Components
+
+# Angular MDC component migration 
