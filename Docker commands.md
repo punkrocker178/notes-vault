@@ -15,3 +15,9 @@
 ### Helps with error: 'unexpected end of JSON input'
 `docker rm -f $(docker ps -a -q) # Remove all in one command with --force`
 `docker exec -i -t "container_name_here" /bin/bash # Go to container command line`
+
+### Docker build
+`docker build -t my-image-name .
+Some [[Docker files]] for custom docker image
+- Node & chromium for Front end development & testing
+- Keycloak image
