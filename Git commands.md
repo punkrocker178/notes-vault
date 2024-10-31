@@ -15,3 +15,19 @@
 
 ### Delete multiple branch using regex, grep is used for filter output with regex, sed then use that ouput to edit(omit “origin/”)
 `git push -d origin $(git branch -r | grep -E '<regex>' | sed -e 's/origin\///')`
+
+## Fix error object file `.git/object/` is empty
+
+Run 
+```
+git fsck --fulll`, 
+```
+
+It will return multiple empty objects.
+We then can remove these files manually.
+Or we can run to remove multiple empty files
+```
+
+find .git/objects/ -size 0 -exec rm -f {} \;
+```
+

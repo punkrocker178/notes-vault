@@ -19,7 +19,7 @@ Browser will need a javascript engine to intepret and excute JS
 Also generates source map files for debuggin ES2015+ source code.
 => In short term, transpilers transfer ES6 code to ES5 code so that every browser can run it.
 
-Some notable tranpilers:ba
+Some notable tranpilers:
 1. [Babel.js](https://babeljs.io/docs/)
 2. [Typescript](https://code.visualstudio.com/docs)
 3. [Traceur](https://github.com/google/traceur-compiler) (end of life)
