@@ -12,3 +12,13 @@ We need credential provider to able to install NuGet private packages
 # Development SSL certifitcates
 `dotnet dev-certs https --clean`
 `dotnet dev-certs https --trust`
+
+# Upgrade dotnet 
+Remove previous version
+`sudo apt remove 'dotnet*' 'aspnet*' 'netstandard*'`
+
+Install SDK
+`sudo apt-get update && sudo apt-get install -y dotnet-sdk-9.0`
+
+# Reference
+https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#supported-distributions

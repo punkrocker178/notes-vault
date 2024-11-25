@@ -20,7 +20,7 @@
 
 Run 
 ```
-git fsck --fulll`, 
+git fsck --full 
 ```
 
 It will return multiple empty objects.
