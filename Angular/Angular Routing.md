@@ -1,4 +1,4 @@
-# Route config
+# Route config (Module)
 ```typescript
 const routes: Routes = [
 	{ path: 'first-component', component: FirstComponent },
@@ -31,6 +31,26 @@ We can now import `AppRoutingModule` in our desired module so the app can naviga
 export class AppModule
 ```
 
+# Route config (providedRouter)
+`providedRouter` is a function that setup necessary providers to enable `Router` functionality for the application. 
+Compared to the RoutingModule method, it serve the same purpose but with less boilerplate code.
+This function based configuration is aimed for the standalone component implementation.
+
+```typescript
+// Routes array
+const routes: Routes = [
+	{ path: 'first-component', component: FirstComponent },
+	{ path: 'second-component', component: SecondComponent }
+];
+
+// provide routes to appConfig
+export const appConfig: ApplicationConfig = {
+	providers: [provideRouter(routes)]
+};
+
+// main.ts
+bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));
+```
 ## Route order
 Ordering route is very important as: 
 > the `Router` uses a first-match wins strategy when matching routes, so more specific routes should be placed above less specific routes.

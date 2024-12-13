@@ -10,6 +10,7 @@ Guards are functions that first run to check whether the conditions match when n
 # Class based `Route` guards deprecation
 Angular 16 prefer functional guards, all `Route` guards interface are now deprecated.
 Functional guards can be used directly in `Route` config
+
 ```typescript
 const routes: Route[] = [
   {

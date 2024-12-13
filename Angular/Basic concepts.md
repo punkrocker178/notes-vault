@@ -30,10 +30,10 @@ Example:
 
 ## Directives
 
-Compared to a `component`, `directive` is a class that can modify the behavior of an HTML element or a `component`.   
+Compared to a `component`, `directive` is a class that can modify the behavior of an HTML element or a `component`.
 `directive` apply directly to an element so we don't need to declare a template for it.  
 `directive` also implements lifecycle methods same as a `component`
-Most popular `directives` are: 
+Most popular `directives` are:
 
 - Structural directives: `*ngIf`, `*ngFor`
 - Attribute directives: `ngClass`, `ngModel`
@@ -49,6 +49,7 @@ Pipes can be chained together to output the desired value.
 By using pipes, you have increased the reusability of the code base by declaring the transformation function once. So it can be used across many templates.
 
 Usage:
+
 ```html
 <span>{{ date | datePipe }}</span> <!-- Transform Date object into date string -->
 <span>{{ totalValue | currency }} <!-- Transform number in to currency string -->
@@ -74,6 +75,7 @@ Usage:
 #### Custom pipes
 
 A pipe must have two things:
+
 - A name, specified in the pipe decorator
 - A method named `transform` that performs the value transformation.
 
@@ -89,9 +91,14 @@ export class KebabCasePipe implements PipeTransform {
   }
 }
 ```
+
 ## Services
 ## Resolvers
-## Guards
 ## Modules
+
+## Guards
+Functions to check whether route is allowed to navigate or not.
+[[Guards]]
 ## Routing
+Is a module to let user add routing config to application
 [[Angular Routing]]
