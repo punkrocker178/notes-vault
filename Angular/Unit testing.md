@@ -33,7 +33,7 @@ Below is the code to setup our test component.
   });
 ```
 
-`beforeEach`: is a callback function to let jasmine run this function for every `it` declared.
+`beforeEach` is a callback function to let jasmine run this function for every `it` declared.
 Then we will call `TestBed.configureTestingModule` to create the testing component for us. The parameter of this function is an object which has the same structure of an Angular module.
 
 ### Define a test case

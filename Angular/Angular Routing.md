@@ -33,7 +33,7 @@ export class AppModule
 
 # Route config (providedRouter)
 `providedRouter` is a function that setup necessary providers to enable `Router` functionality for the application. 
-Compared to the RoutingModule method, it serve the same purpose but with less boilerplate code.
+Compared to the Routing module method, it serves the same purpose but with less boilerplate code.
 This function based configuration is aimed for the standalone component implementation.
 
 ```typescript

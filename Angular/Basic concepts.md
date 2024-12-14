@@ -93,6 +93,9 @@ export class KebabCasePipe implements PipeTransform {
 ```
 
 ## Services
+Services are a class that have `@Injector()` decorator so it can be injected in components.
+Services can be used to call API or to hold application logic and state.
+[[Services]]
 ## Resolvers
 ## Modules
 
@@ -100,5 +103,46 @@ export class KebabCasePipe implements PipeTransform {
 Functions to check whether route is allowed to navigate or not.
 [[Guards]]
 ## Routing
-Is a module to let user add routing config to application
+Is a module or config function to let user add routing config to application
 [[Angular Routing]]
+
+## App bootstraping (main.ts)
+Since standalone component is a thing now, so there are 2 ways to intialize an Angular application
+#### Bootstrap module
+
+My prefered method, using this method, we have to declare `AppModule` with some basic imports and declare which component to be bootstraped
+```typescript
+// AppModule
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+// main.ts
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+#### Bootstrap standalone component
+
+The root component to be bootstraped must be `standalone: true`
+```typescript
+// main.ts
+export const appConfig: ApplicationConfig = {
+	providers: [
+		provideZoneChangeDetection({ eventCoalescing: true }),
+		provideRouter(routes)
+	]
+};
+
+bootstrapApplication(AppComponent, appConfig)
+	.catch((err) => console.error(err));
+```
