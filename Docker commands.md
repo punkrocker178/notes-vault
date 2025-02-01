@@ -1,7 +1,7 @@
 # Helpful Docker commands and code snippets
 
 ### CONTAINERS ###
-`docker run --rm -it -p <port-number>:<port-number> -v $PWD:/<container-dir> -v /<container-dir> <image:tag> <command>
+`docker run --rm -it -p <port-number>:<port-number> -v $PWD:/<container-dir> -w /<container-dir> <image:tag> <command>
 `docker stop $(docker ps -a -q) #stop ALL containers`
 `docker rm -f $(docker ps -a -q) # remove ALL containers`
 `docker rm -f $(sudo docker ps --before="container_id_here" -q) # can also filter`
