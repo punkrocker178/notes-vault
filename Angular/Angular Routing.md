@@ -31,8 +31,8 @@ We can now import `AppRoutingModule` in our desired module so the app can naviga
 export class AppModule
 ```
 
-# Route config (providedRouter)
-`providedRouter` is a function that setup necessary providers to enable `Router` functionality for the application. 
+# Route config (provideRouter)
+`provideRouter` is a function that setup necessary providers to enable `Router` functionality for the application. 
 Compared to the Routing module method, it serves the same purpose but with less boilerplate code.
 This function based configuration is aimed for the standalone component implementation.
 
