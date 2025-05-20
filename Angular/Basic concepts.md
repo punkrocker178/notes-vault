@@ -96,6 +96,50 @@ export class KebabCasePipe implements PipeTransform {
 Services are a class that have `@Injector()` decorator so it can be injected in components.
 Services can be used to call API or to hold application logic and state.
 [[Services]]
+
+## Input
+We can pass data to child component using inputs. Angular now has 3 types of input
+### @Input
+We can declare an input in a child component that data can be passed in.
+By using `ngOnChanges()` lifecycle, we can get the latest value each time the input changes.
+```Typescript
+export class CustomCheckbox { 
+	@Input() checked: boolean;
+
+	ngOnChanges(changes: SimpleChanges) {
+		//We can read value each time the input changes
+		console.log(changes.checked);
+	}
+}
+```
+### Signal input
+Serve the same purposes as the original @Input, but with the benefit of signals.
+[Why should we use signal inputs and not `@Input()`?](https://v18.angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input)
+- Type safe
+- Value can easily be derived and manipulated using signal `computed()`
+- More local monitoring by using `effect()` instead of `ngOnChanges()`
+
+```Typescript
+export class CustomCheckbox { 
+	//Optional input
+	showLabel = input(false);
+	
+	//Required input
+	disabled = input.required(false);
+}
+```
+### Model input (developer preview)
+[Model inputs • Angular](https://v18.angular.dev/guide/signals/model)
+**Model inputs** are a special type of input that enable a component to write new values back to another component.
+```Typescript
+export class CustomCheckbox { 
+	// This is a model input. 
+	checked = model(false); 
+	// This is a standard input. 
+	disabled = input(false);
+}
+```
+## Output
 ## Resolvers
 ## Modules
 
@@ -105,44 +149,3 @@ Functions to check whether route is allowed to navigate or not.
 ## Routing
 Is a module or config function to let user add routing config to application
 [[Angular Routing]]
-
-## App bootstraping (main.ts)
-Since standalone component is a thing now, so there are 2 ways to intialize an Angular application
-#### Bootstrap module
-
-My prefered method, using this method, we have to declare `AppModule` with some basic imports and declare which component to be bootstraped
-```typescript
-// AppModule
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-
-// main.ts
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-```
-#### Bootstrap standalone component
-
-The root component to be bootstraped must be `standalone: true`
-```typescript
-// main.ts
-export const appConfig: ApplicationConfig = {
-	providers: [
-		provideZoneChangeDetection({ eventCoalescing: true }),
-		provideRouter(routes)
-	]
-};
-
-bootstrapApplication(AppComponent, appConfig)
-	.catch((err) => console.error(err));
-```
