@@ -77,7 +77,7 @@ JavaScript is single-threaded. The Event Loop is the mechanism that allows JavaS
 - **Web APIs:** Where the browser handles background tasks like `setTimeout` or `fetch` asynchronously.
 - **Callback Queue:** Where callback functions wait after their background task is complete.
 - **Call Stack:** Where function calls are executed (LIFO - Last-In, First-Out).
-![[Pasted image 20250627190112.png]]
+![[Event loop.png]]
 
 1. Js runtime will pop the call stack, execute one by one.
 2. If there are tasks that use browser API, it will be moved to Web APIs list so it can be run asynchronously.
