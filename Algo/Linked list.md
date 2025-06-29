@@ -40,7 +40,7 @@ Instead, we should use another pointer.
 ```typescript
 let curr = head;
 while(curr != null) {
-	// list update operations 
+	// Example: some update operations when we traverse
 	// curr.val = 0;
 	// move to the next node
 	curr = curr.next;
@@ -56,3 +56,11 @@ return head;
 3. Deletion
 4. Seaching
 5. Reversing
+
+# Common techniques
+1. Two pointer
+	We use 2 pointers `slow` and `fast` to traverse the list to `search`, `reorder`, `delete` with specific requirements. 
+		- https://leetcode.com/problems/odd-even-linked-list
+		- https://leetcode.com/problems/reverse-linked-list
+		- https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list
+		- https://leetcode.com/problems/partition-list/
