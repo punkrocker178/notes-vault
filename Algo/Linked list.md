@@ -1,11 +1,11 @@
-![[linked-list.png]]
+![[img/linked-list.png]]
 
-# Definition
+## Definition
 Linked list is a chain of nodes that is linked together.
 - Singly linked list: Each node has 1 connection to the other node. So, list only has 1 direction, from start to end. List ends when a node points to null.
 - Doubly linked list: Each node has 2 connections to other nodes. Which means we can traverse the list both directions, forward and backward.. List ends when both `head.back` = null and `end.next` = null;
 
-# Structure
+## Structure
 ```typescript
 class ListNode {
 	public val: number;
@@ -24,7 +24,7 @@ head.next.next.next = new ListNode(5);
 head.next.next.next.next = new ListNode(9);
 ```
 
-# Traverse 
+## Traversing
 We can traverse the list by setting the pointer to be the next node
 `head = head.next`
 
@@ -50,21 +50,21 @@ while(curr != null) {
 return head;
 ```
 
-# Common operations
+## Common operations
 1. Traversal
 2. Insertion
 3. Deletion
 4. Seaching
 5. Reversing
 
-# Common techniques
+## Common techniques
 1. **Two pointers**: O(n) time, O(1) space
 	Iteration method. We use 2 pointers `slow` and `fast` to traverse the list to `search`, `reorder`, `delete` with specific requirements. Each problem have different setup between pointers. 
 		- [Odd even list](https://leetcode.com/problems/odd-even-linked-list) (odd pointer and even pointer. Each pointer skip 1 node, after iteration end, combine both list to return result)
 		- [Reverse linked list](https://leetcode.com/problems/reverse-linked-list) (3 pointers to increase readability: `prev`, `curr`, `next`. At each iteration, we set the relations of `curr` and `prev`, then move 3 pointers forward)
 		- [Delete the middle node of a linked list](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list) (`fast` and `slow` pointer, `fast` is always 2 steps ahead of slow. Which is double the movement of `slow`. By the time `fast` is null, `slow` is at the middle)
 		- [Remove nth node from end of list](https://leetcode.com/problems/remove-nth-node-from-end-of-list) (`fast` and `slow`. We can initially move `fast` by `k` steps ahead of `slow`. If `fast` = null then  `slow` has reached the node)
-		- [Partitrion list](https://leetcode.com/problems/partition-list ) (Search problem. Have 2 pointers and 2 dummy nodes. `currBig` and `currSmall`. If `node.val` >= `x`, set relation of pointer `currBig` to node, else set pointer `currSmall` to node. At the end of list iteration, combine both list `small` and `big` to return result)
+		- [Partitrion list](https://leetcode.com/problems/partition-list ) (Search problem. Have 2 pointers and 2 dummy nodes. `currBig` and `currSmall`. If `node.val` >= `x`, set relation of pointer `currBig` to node, else set pointer `currSmall` to node. At the end of list iteration, combine both list `small` and `big` to return result) ^f68fef
 2. **Dummy / Sentinnel node**
 	This technique will append a dummy node to the front of the `head`. By doing this, we have preserved the list, `head` can be used to traverse the list. Also, we can handle edge case like `head` = null gracefully without using if. This technique is usually combined with 2 pointer technique
 3. **Recursion**: O(n) time, O(1) space.
