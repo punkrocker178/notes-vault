@@ -18,6 +18,9 @@ Example 1:
 ```typescript
 // Reverse array
 // [1,2,3,4,5]
+
+let i = 0;
+let j = nums.length - 1;
 while(i < j) {
 	swap(nums[i], nums[j]);
 	i++;
@@ -31,7 +34,8 @@ Example 2:
 ```typescript
 // Two sum. Find a pair in array that match target x
 // In this example, array needs to be sorted first
-
+let i = 0;
+let j = nums.length - 1;
 while(i < j) {
 	let sum = nums[i] + nums[j];
 	if (sum > x) {
@@ -56,7 +60,7 @@ The above example is a different problem but same pattern can be applied. Since 
 1. Slow & fast pointer 
 	See [[Linked list#Common techniques]]
 2. Different pace
-	Example 1
+	[Example 1: Move zeroes](https://leetcode.com/problems/move-zeroes/)
 ```typescript
 // Move zeroes to end of array
 // Input: [0,1,0,3,5,12]
@@ -75,5 +79,15 @@ for(let j = 0; j < nums.length; i++) {
 for (let i = lastNonZeroIndex; i < nums.length; i++) {
 	nums[i] = 0;
 }
+// Nums array: [1,3,5,12,0,0]
 ```
-The `lastNonZeroIndex` is for readability and more straightforward to the problem. We can see this as `i` and `j`. The pattern here is using `j` for scanning the array and overwrite the positions `i` from the start. By doing this, we can move all non zero numbers to the start of the array. The remaining positions of the array can be set to 0.
+The `lastNonZeroIndex` is for readability and more straightforward to the problem. We can see this as `i` and `j`. The pattern here is using `j` for scanning the array and overwrite the positions `i(lastNonZeroIndex)` from the start if `nums[j]` is non zero. By doing this, we can move all non zero numbers to the start of the array. Leaving the remaining positions to be filled with 0.
+
+[Example 2: Merge 2 sorted arrays](https://leetcode.com/problems/merge-sorted-array)
+```typescript
+// nums1: [1,2,3]
+// nums2: [2,5,6]
+// Output: [1,2,2,3,5,6]
+
+
+```
