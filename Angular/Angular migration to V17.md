@@ -7,7 +7,7 @@
 - Swiper V9 removed Angular Swiper component
 - Material sass import errors on CI environment (Solved by reduce global `@angular/material` imports, only import what is needed)
 
-In order to upgrade to V18, we need to migrate all `LegacyComponent` to MDC components (V17 still let us use Material 16, from V18 we will need to sync to Material 18)
+In order to upgrade to V18, we need to migrate all `LegacyComponent` to MDC components (Angular V17 still let us use Material 16, from V18 we will need to sync to Material 18)
 
 # Migrating Legacy Material to MDC Material
 
