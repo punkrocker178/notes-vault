@@ -2,7 +2,7 @@
 # Definition
 Jest is a browser less testing and runner framework that is now supported in Angular 16 [[Unit testing]].
 Browser less testing will significantly improve runner performance thus reducing the waiting time making our development cycle faster.
-Jest syntax is not different to Jasmine so we can migrate with ease.
+Jest syntax is no different to Jasmine so we can migrate with ease.
 
 # Usage
 Update `test.builder` in `angular.json` (See more: [[Angular config#angular.json]])

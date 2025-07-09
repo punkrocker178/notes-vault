@@ -98,6 +98,7 @@ Services can be used to call API or to hold application logic and state.
 [[Services]]
 
 ## Input
+![Input data flow diagram of data flowing from parent to child](https://v17.angular.io/generated/images/guide/inputs-outputs/input.svg)
 We can pass data to child component using inputs. Angular now has 3 types of input
 ### @Input
 We can declare an input in a child component that data can be passed in.
@@ -128,9 +129,9 @@ export class CustomCheckbox {
 	disabled = input.required(false);
 }
 ```
-### Model input (developer preview)
+### Model input 
 [Model inputs • Angular](https://v18.angular.dev/guide/signals/model)
-**Model inputs** are a special type of input that enable a component to write new values back to another component.
+**Model inputs** are a special type of input that enable a component to write new values back to parent component.
 ```Typescript
 export class CustomCheckbox { 
 	// This is a model input. 
@@ -140,6 +141,33 @@ export class CustomCheckbox {
 }
 ```
 ## Output
+![Output diagram of the data flow going from child to parent](https://v17.angular.io/generated/images/guide/inputs-outputs/output.svg)
+The usage of Output is for notify changes happenning in child component to the parent component
+## @Output
+Takes an `EventEmiiter` then emit that event to the parent component
+```typescript
+import { Output, EventEmitter } from '@angular/core';
+
+// Child component declaration & properties...
+
+@Output() newItemEvent = new EventEmitter<string>();
+
+addNewItem(value: string) { 
+	this.newItemEvent.emit(value); 
+}
+```
+
+After we instantiate `newItemEvent` EventEmitter. We can now use `emit()` method to send value to parent component.
+
+```html
+<child-component (newItemEvent)="handleEvent($event)">
+```
+The emitted event in child component will go through parent component handler function `handleEvent` with the `$event` argument as the value we have emitted.
+`(newItemEvent)` must be the same with the one declared with `@Output`
+
+## Output function
+
+
 ## Resolvers
 ## Modules
 
