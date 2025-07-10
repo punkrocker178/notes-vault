@@ -114,7 +114,7 @@ export class CustomCheckbox {
 }
 ```
 ### Signal input
-Serve the same purposes as the original @Input, but with the benefit of signals.
+Serve the same purposes as the original @Input, but with the benefit of signals. 
 [Why should we use signal inputs and not `@Input()`?](https://v18.angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input)
 - Type safe
 - Value can easily be derived and manipulated using signal `computed()`
@@ -166,9 +166,36 @@ The emitted event in child component will go through parent component handler fu
 `(newItemEvent)` must be the same with the one declared with `@Output`
 
 ## Output function
-
-
+A function based `output` doesn't rely `EventEmitter` but still have the same functionality as `@Output` decorator. Angular now reccomends using `output` function instead of `@Ouput`:
+- **Consistent with new APIs**: Aligns with other function based APIs `input()` and `model()` signals, thus increase the typing/developer experience
+- **Type safe**: Stricter type compared to `EventEmitter`. 
+	Example: `output()` without passing type means `void` type. Meanwhile, `EventEmitter()` with no type is considered as `any` type
+- **Simpler API**: No longer use `EventEmitter` which inherit from RxJs `Subject` class. # `OutputEmitterRef` only has 2 methods `subscribe()` and `emit()`
+- **Less boilerplate code**: declaration is now shorter than `@Ouput` decorator
 ## Resolvers
+Provide data to the route currently navigating to. Route is activated when data is resolved.
+> A data provider can be used with the router to resolve data during navigation. The router waits for the data to be resolved before the route is finally activated.
+
+## Use cases
+1. **Separate data layer**: By separate the data retrieval from the component. We can reuse data retrieval anywhere and offload the logic of the component.
+2. **Dynamically inject service**: In a growing application, we may have a `BaseService` and `ServiceA` and `ServiceB`, a shared component used in many features. FeatureA needs the component to inject`ServiceA` and FeatureB needs to inject `ServiceB`. To do this, we can use a resolver to resolve the correct service to it's corresponding routes
+	Example:
+```typescript
+// Routing module...
+routes = [
+		{
+			path: 'featureA/details/:id', 
+			component: FeatureA, 
+			resolve: { commonService: ServiceA },
+		},
+		{
+			path: 'featureB/details/:id', 
+			component: FeatureB, 
+			resolve: { commonService: ServiceB },
+		},
+	]),
+];
+```
 ## Modules
 
 ## Guards
