@@ -140,10 +140,11 @@ export class CustomCheckbox {
 	disabled = input(false);
 }
 ```
+
 ## Output
 ![Output diagram of the data flow going from child to parent](https://v17.angular.io/generated/images/guide/inputs-outputs/output.svg)
 The usage of Output is for notify changes happenning in child component to the parent component
-## @Output
+### @Output
 Takes an `EventEmiiter` then emit that event to the parent component
 ```typescript
 import { Output, EventEmitter } from '@angular/core';
@@ -165,22 +166,25 @@ After we instantiate `newItemEvent` EventEmitter. We can now use `emit()` method
 The emitted event in child component will go through parent component handler function `handleEvent` with the `$event` argument as the value we have emitted.
 `(newItemEvent)` must be the same with the one declared with `@Output`
 
-## Output function
+### Output function
 A function based `output` doesn't rely `EventEmitter` but still have the same functionality as `@Output` decorator. Angular now reccomends using `output` function instead of `@Ouput`:
 - **Consistent with new APIs**: Aligns with other function based APIs `input()` and `model()` signals, thus increase the typing/developer experience
 - **Type safe**: Stricter type compared to `EventEmitter`. 
 	Example: `output()` without passing type means `void` type. Meanwhile, `EventEmitter()` with no type is considered as `any` type
 - **Simpler API**: No longer use `EventEmitter` which inherit from RxJs `Subject` class. # `OutputEmitterRef` only has 2 methods `subscribe()` and `emit()`
 - **Less boilerplate code**: declaration is now shorter than `@Ouput` decorator
+
 ## Resolvers
-Class based or function based resolvers provide data to a route before navigation
+Class based or function based resolvers provide data to a route before navigation.  
 [[Resolvers]]
+
 ## Guards
-Functions to check whether route is allowed to navigate or not.
+Functions to check whether route is allowed to navigate or not.  
 [[Guards]]
+
 ## Routing
-Is a module or config function to let user add routing config to application
+Is a module or config function to let user add routing config to application.  
 [[Angular Routing]]
 
 ## Modules (NgModule)
-Used to be the most frustrating aspect in Angular. Due to the steep learning curve, Angular now recommends using standalone components from V18
+[[Modules (@NgModule)]]

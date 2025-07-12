@@ -1,5 +1,5 @@
 Reference from [Forms Overview]([Forms • Overview • Angular](https://angular.dev/guide/forms))
-[Stack blitz](https://stackblitz.com/edit/stackblitz-starters-izevjza2?file=src%2Fcomponents%2Fform-tester%2Fform-tester.html)
+[Stack blitz playground](https://stackblitz.com/edit/stackblitz-starters-izevjza2?file=src%2Fcomponents%2Fform-tester%2Fform-tester.html)
 # Template-driven forms
 
 Use directives `ngForm`, `ngModel` to implicit create form controls on template. This approach is a quick and simple way to implement forms, the model that binds to a form control is directly updated by `ngModel`.
