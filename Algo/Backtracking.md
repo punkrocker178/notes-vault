@@ -22,7 +22,7 @@ Think of backtracking as **exploring a maze** :
 function permute(nums: number[]): number[] {
 	function backtrack(path: number[], used: number[]): void {
 		if (path.length == nums.length) {
-			result.push(path);
+			result.push([...path]);
 			return;
 		}
 		
