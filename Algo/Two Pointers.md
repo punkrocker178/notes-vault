@@ -57,6 +57,8 @@ return [i, j];
 
 ```
 The above example is a different problem but same pattern can be applied. Since the array is sorted, we now know that `sum > x` means our indices combination are too big, we need to decrement `j` to give a smaller sum. If `sum < x` means we need to increment `i` to find a larger sum;
+
+Example 3: [Valid Palindrome - LeetCode](https://leetcode.com/problems/valid-palindrome/)
 ### 2. Two pointer move at same direction, different paces
 1. Slow & fast pointer 
 	See [[Linked list#Common techniques]]

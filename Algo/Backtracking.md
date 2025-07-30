@@ -68,3 +68,29 @@ Start: []
     └── Choose 2 → [3, 2]
         └── Choose 1 → [3, 2, 1] ✅
 ```
+
+### [Combination Sum](https://leetcode.com/problems/combination-sum)
+
+>Given an array of **distinct** integers `candidates` and a target integer `target`, return _a list of all **unique combinations** of_ `candidates` _where the chosen numbers sum to_ `target`_._ You may return the combinations in **any order**.
+>The **same** number may be chosen from `candidates` an **unlimited number of times**. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+
+**Input:** candidates = `[2,3,6,7]`, target = 7
+**Output:** `[[2,2,3],[7]]`
+
+### Intuition:  
+Since the problem allows to reuse an element multiple times, we can backtrack over and over until the remaining target = 0 or less than 0.  
+In each backtrack, we decrement the remaining target by `target - candidates[i]`:
+
+- If `remainingTarget == 0` We have find a combination that sum up to `target`
+- If `remainingTarget < 0`. We have not found a combination, return to parent and remove element from `path`
+
+**Note**: The problem allow to reuse elements but dont allow to have duplicate combinations: `[2,3,3]` and `[3,2,2]` are the same. So `[2,3,3]` is enough.  
+In order to do this, we have to keep track of the `currentIndex` in our backtrack steps, `currentIndex` let us explore new combinations while not producing duplicates by skipping the previous elements.
+
+So our backtrack will look like this:
+```javascript
+backtrack(path, currentIndex, remainingTarget) {}
+```
+In each backtrack, we explore combinations by using `for` to loop through `candidates`.  
+The loop is started from `currentIndex` to use the same element multiple times and prevent using previous elements.  
+At each iteration, we add currentElement to `path` and continue to go deeper. After that, we pop the `path` to try new combinations.
