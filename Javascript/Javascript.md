@@ -53,17 +53,20 @@ utilityFunc().print();
 ## Closures
 Combine function usage with lexical scope, we have closures. Closures can run even if the parent function returned.
 ```javascript
-function utilityFunc() {
-	let count = 0;
-	return function count() {
-		console.log(count++);
-	}
+function countWithState() {
+  let count = 0;
+  return function() {
+    console.log(++count);
+  }
 }
-const counter = utilityFunc();
-count();// 1
-count();// 2
-```
 
+const counter = countWithState();
+counter();// 1
+counter();// 2
+```
+### Examples
+1. [Debounce | JavaScript Interview Questions with Solutions](https://www.greatfrontend.com/interviews/study/gfe75/questions/javascript/debounce)
+2. 
 ### ### Common Uses of Closures
 1. **Data Privacy/Encapsulation:** Closures let you emulate private variables.
 2. **Function Factories:** You can use closures to create customized functions.
@@ -75,11 +78,12 @@ More info: [How do JavaScript closures work? - Stack Overflow](https://stackover
 # Event loop
 JavaScript is single-threaded. The Event Loop is the mechanism that allows JavaScript to handle asynchronous tasks (like fetching data or timers) without blocking the main thread.
 - **Web APIs:** Where the browser handles background tasks like `setTimeout` or `fetch` asynchronously.
-- **Callback Queue:** Where callback functions wait after their background task is complete.
-- **Call Stack:** Where function calls are executed (LIFO - Last-In, First-Out).
+- **Callback Queue (TaskQueue):** After browser have finished the async operations, those callbacks will be moved here and waiting for the Call Stack to be empty.
+- **Micro task Queue:** Callbacks from `promise`, `queueMicrotask()`, or `MutationObserver` will be moved here after browser finished the async operations. **Micro task queue** also waiting for the Call Stack to be empty to dequeue to Call Stack. But EventLoop will prioritize **Micro task Queue** more than **Callback Queue**
+- **Call Stack:** Where function calls are executed (LIFO - Last-In, First-Out). Which is, most inner function is executed first.
 ![[img/Event loop.png]]
 
 1. Js runtime will pop the call stack, execute one by one.
 2. If there are tasks that use browser API, it will be moved to Web APIs list so it can be run asynchronously.
-3. Tasks in Web APIs done running will be moved to the Callback queue
+3. Tasks in Web APIs done running will be moved to the Callback queue or Micro task queue respectively depends on what type of callback comes from.
 4. Event loop will move tasks from Callback queue to Call stack if stack is empty.
