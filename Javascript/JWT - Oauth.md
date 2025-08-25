@@ -45,3 +45,50 @@ In OAuth 2.0, **grants** are the set of steps a Client has to perform to get r
 - [Client Credentials Grant Type](https://auth0.com/docs/api-auth/tutorials/client-credentials): Used for non-interactive applications e.g., automated processes, microservices, etc. In this case, the application is authenticated per se by using its client id and secret.
 - [Device Authorization Flow](https://auth0.com/docs/flows/concepts/device-auth): A grant that enables use by apps on input-constrained devices, such as smart TVs.
 - [Refresh Token Grant](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/): The flow that involves the exchange of a Refresh Token for a new Access Token.
+
+# Storing `acessToken` in `localStorage` or `cookies`
+
+### `localStorage`
+As mentioned in [[Random Interview questions#2.2 LocalStorage]]. Data is available even after browser is closed.
+Which is useful if to store `accessToken` and don't have to do authenticate flow everytime user opens the browser.
+#### Pros
+- **Simple API** Easy to use with straightforward methods like `setItem()`, `getItem()`, and `removeItem()`.
+- **Large Storage Capacity** Compared to cookies, `localStorage` offers more space (typically around 5–10MB per origin).
+- **No Automatic Transmission** Unlike cookies, data in `localStorage` isn’t automatically sent with every HTTP request, reducing unnecessary bandwidth usage.
+#### Cons
+- **Vulnerable to XSS Attacks** If your site is compromised by cross-site scripting, attackers can easily access tokens stored in `localStorage`.
+- **No Built-in Expiration** Tokens remain until explicitly removed, which can be a security risk if not managed properly.
+- **Not Accessible in HTTP-only Contexts** Unlike cookies with the `HttpOnly` flag, `localStorage` is accessible via JavaScript, making it less secure for sensitive data.
+- **No Support for Secure Transmission** You must manually ensure tokens are only used over HTTPS.
+
+#### Best practices
+- Sanitize and validate all user inputs to prevent XSS.
+- Use short-lived tokens and refresh them frequently.
+- Consider storing only non-sensitive data in `localStorage`.
+- Pair with other security measures like Content Security Policy (CSP).
+
+### `cookies`
+[[Random Interview questions#2.3 Cookies]]
+We can store `accessToken` directly in cookie value or implement in-memory storage in backend to manage user `accessToken` and hide `accessToken` value from the public.
+#### Pros
+- Cookies can be expired automatically
+- `HttpOnly` cookies prevent access from Javascript, which prevent XSS
+- With `Secure` attribute, cookies can only be sent over HTTPS, which improves security
+- With further implementation (additional implementation to retreive user `accessToken`), we can hide sensitive data
+#### Cons
+- Needs to implement on the backend side, which can be complex for small applications
+- Needs to implement `SameSite` attribute to prevent CSRF
+
+### Comparision
+
+| Feature                     | localStorage                  | HTTP-only Cookies                            |
+| --------------------------- | ----------------------------- | -------------------------------------------- |
+| Persistence                 | Persists across sessions      | Persists based on expires or max-age         |
+| AccessAccess via JavaScript | ✅ Yes                         | ❌ No (protected from JS access)              |
+| Vulnerability to XSS        | High risk                     | Protected (not accessible via JS)            |
+| Vulnerability to CSRF       | Safe (not sent automatically) | Risk unless mitigated with SameSite          |
+| Automatic Transmission      | ❌ No                          | ✅ Sent with every request to matching domain |
+| Storage Size                | ~5–10MB                       | ~4KB                                         |
+| Expiration Handling         | ❌ Manual                      | ✅ Built-in via cookie attributes             |
+| Ease of Use                 | Simple API (getItem, setItem) | Requires server-side handling                |
+| Secure Context Enforcement  | Manual                        | Enforced with Secure flag                    |
