@@ -1,7 +1,21 @@
+# State Management
+## Why
+As applications grow overtime, data often needs to be shared between components that aren't directly related in the component tree.
+Without a dedicated state management solution, developers face 2 major problems:
+- **Prop drilling:** Sometimes components are coupled together so they share the same state. The naive method is to pass state as `prop` to child component, but passing to deeply nested components can be hard to maintain and cause redundancy.
+- **Inconsistent state:** Multiple components have their own copies of the same data. It is hard to keep them all synchronized. If one of them update the data, this can lead to conflicting UI bugs.
+State management libraries like Redux, Zustand, or MobX solve these issues by creating a centralized **store** for the application's shared state. Any component that needs data can subscribe to the store, and any component can dispatch actions to update it.
+**=> Single source of truth.**
+
+# Redux
+Is a state management library for React. By using Redux, we are enforcing the **uni-directional data flow**, which makes state changes predictable and easier to debug.
+The flow can be visualized as: 
+**UI Event ➡️ Dispatch Action ➡️ Reducer Updates State ➡️ UI Re-renders**.
 ## Shopping cart example
 
 Here's a complete example of a shopping cart application using React and Redux with multiple reducers:
 
+**Reducers** are usually in a separate file
 ```jsx
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
@@ -59,7 +73,10 @@ const rootReducer = combineReducers({
   cart: cartReducer,
   user: userReducer,
 });
+```
 
+**Consumer** and **dispatch actions**
+```jsx
 // --- Create Store ---
 const store = createStore(rootReducer);
 
@@ -138,4 +155,9 @@ export default App;
 4. **Provider:**
    - The `Provider` component makes the Redux store available to all components
 
-This example demonstrates how to structure a React Redux application with multiple reducers, allowing you to manage different aspects of your application state in a clean and organized way.
+## **Reducer Slice**
+A **reducer slice** is a collection of the Redux reducer logic and actions for a single feature of your application, typically defined together in a single file.
+
+Benefits of using Reducer slice:
+- **Less boiler plate code**
+- **Simpler Immutable Logic:** It uses a library called **Immer** internally. This lets you write code that _looks_ like you are mutating the state directly.

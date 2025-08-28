@@ -78,7 +78,7 @@ Should contains 3 key concepts:
 	- **Component-based frameworks** (Angular, React, Vue, ...etc). Each function is in a contained component. Making the code easier to manage, test, and reuse.
 	- **Micro frontends:** Similar to Microservices, large UI application can be splited into smaller, independently deployable applications.
 - **Code Splitting:** Instead of shipping your entire application's JavaScript in one giant file, split it into smaller chunks. The browser then only downloads the code needed for the initial page view. => Improve initial load times.
-- **Centralized State Management:** Large applications have complex state. Using a state management library like **Redux, ngRx** provides a single, predictable source of truth. The one-way data prevents inconsistencies and makes debugging much easier than "prop drilling"(React) or nested `@Input` (Angular)
+- **Centralized State Management:** Large applications have complex state. Using a state management library like **Redux, ngRx** provides a single, predictable source of truth. The one-way data prevents inconsistencies and makes debugging much easier than **prop drilling**(React) or nested `@Input` (Angular). [[State Management & Redux | More info here]]
 ## 2.Performance Optimization
 A scalable frontend must remain fast and responsive, regardless of how many features are added.
 There are serveral methods:

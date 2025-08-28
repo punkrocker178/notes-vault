@@ -67,7 +67,7 @@ counter();// 2
 ### Examples
 1. [Debounce | JavaScript Interview Questions with Solutions](https://www.greatfrontend.com/interviews/study/gfe75/questions/javascript/debounce)
 2. 
-### ### Common Uses of Closures
+###  Common Uses of Closures
 1. **Data Privacy/Encapsulation:** Closures let you emulate private variables.
 2. **Function Factories:** You can use closures to create customized functions.
 3. **Event Handlers/Callbacks:** They help maintain access to variables when dealing with asynchronous code.
