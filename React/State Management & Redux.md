@@ -1,0 +1,141 @@
+## Shopping cart example
+
+Here's a complete example of a shopping cart application using React and Redux with multiple reducers:
+
+```jsx
+import React from 'react';
+import { createStore, combineReducers } from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
+
+// --- Cart Reducer ---
+const cartInitialState = {
+  items: [],
+};
+
+const cartReducer = (state = cartInitialState, action) => {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return {
+        ...state,
+        items: [...state.items, action.payload],
+      };
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        items: state.items.filter((item) => item.id !== action.payload),
+      };
+    default:
+      return state;
+  }
+};
+
+// --- User Reducer ---
+const userInitialState = {
+  loggedIn: false,
+  userInfo: null,
+};
+
+const userReducer = (state = userInitialState, action) => {
+  switch (action.type) {
+    case 'LOGIN':
+      return {
+        ...state,
+        loggedIn: true,
+        userInfo: action.payload,
+      };
+    case 'LOGOUT':
+      return {
+        ...state,
+        loggedIn: false,
+        userInfo: null,
+      };
+    default:
+      return state;
+  }
+};
+
+// --- Root Reducer ---
+const rootReducer = combineReducers({
+  cart: cartReducer,
+  user: userReducer,
+});
+
+// --- Create Store ---
+const store = createStore(rootReducer);
+
+// --- React Components ---
+function Cart() {
+  const cartItems = useSelector((state) => state.cart.items);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>Shopping Cart</h2>
+      {cartItems.map((item) => (
+        <div key={item.id}>
+          <h3>{item.name}</h3>
+          <button onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: item.id })}>
+            Remove
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function UserInfo() {
+  const user = useSelector((state) => state.user.userInfo);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>User Information</h2>
+      {user ? (
+        <div>
+          <p>Welcome, {user.name}!</p>
+          <button onClick={() => dispatch({ type: 'LOGOUT' })}>Logout</button>
+        </div>
+      ) : (
+        <button onClick={() => dispatch({ type: 'LOGIN', payload: { name: 'Guest' } })}>
+          Login as Guest
+        </button>
+      )}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Provider store={store}>
+      <div>
+        <h1>Shopping App</h1>
+        <Cart />
+        <UserInfo />
+      </div>
+    </Provider>
+  );
+}
+
+export default App;
+```
+
+**Explanation:**
+
+1. **Multiple Reducers:**
+   - `cartReducer` manages the shopping cart items
+   - `userReducer` manages user authentication
+   - Both are combined into a single store using `combineReducers`
+
+2. **Actions:**
+   - `ADD_ITEM`, `REMOVE_ITEM` for cart management
+   - `LOGIN`, `LOGOUT` for user authentication
+
+3. **Components:**
+   - `Cart` component displays items and allows removal
+   - `UserInfo` component handles login/logout
+   - Both components access and update the store using `useSelector` and `useDispatch`
+
+4. **Provider:**
+   - The `Provider` component makes the Redux store available to all components
+
+This example demonstrates how to structure a React Redux application with multiple reducers, allowing you to manage different aspects of your application state in a clean and organized way.
