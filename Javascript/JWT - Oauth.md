@@ -48,6 +48,7 @@ In OAuth 2.0, **grants** are the set of steps a Client has to perform to get r
 
 # Storing `acessToken` in `localStorage` or `cookies`
 
+_Reference Microsoft copilot_
 ### `localStorage`
 As mentioned in [[Random Interview questions#2.2 LocalStorage]]. Data is available even after browser is closed.
 Which is useful if to store `accessToken` and don't have to do authenticate flow everytime user opens the browser.
