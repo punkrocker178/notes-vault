@@ -1,4 +1,4 @@
-![linked-list-example](img/linked-list.png)
+![linked-list](../img/linked-list.png)
 
 ## Definition
 Linked list is a chain of nodes that is linked together.
