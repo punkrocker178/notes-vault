@@ -7,7 +7,7 @@ Browser will need a javascript engine to intepret and excute JS
 3. Safari: JavaScriptCore
 4. IE: Chakra
 
-![Javascript engine](/img/javascript-engine.jpeg)
+![javascript-engine](https://raw.githubusercontent.com/punkrocker178/notes-vault/refs/heads/main/img/javascript-engine.jpeg)
 
 > Any JavaScript engine typically contains a call stack and a heap. The call stack is where the code is executed. The heap is an unstructured memory pool that stores all the objects needed for the application.
 
@@ -80,7 +80,7 @@ JavaScript is single-threaded. The Event Loop is the mechanism that allows JavaS
 - **Callback Queue (TaskQueue):** After browser have finished the async operations, those callbacks will be moved here and waiting for the Call Stack to be empty.
 - **Micro task Queue:** Callbacks from `promise`, `queueMicrotask()`, or `MutationObserver` will be moved here after browser finished the async operations. **Micro task queue** also waiting for the Call Stack to be empty to dequeue to Call Stack. But EventLoop will prioritize **Micro task Queue** more than **Callback Queue**
 - **Call Stack:** Where function calls are executed (LIFO - Last-In, First-Out). Which is, most inner function is executed first.
-![Event loop](/img/Event-loop.png)
+![Event loop](https://raw.githubusercontent.com/punkrocker178/notes-vault/refs/heads/main/img/Event-loop.png)
 
 1. Js runtime will pop the call stack, execute one by one.
 2. If there are tasks that use browser API, it will be moved to Web APIs list so it can be run asynchronously.

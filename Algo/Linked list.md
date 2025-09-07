@@ -1,4 +1,4 @@
-![linked-list](../img/linked-list.png)
+![linked-list.png](https://raw.githubusercontent.com/punkrocker178/notes-vault/refs/heads/main/img/linked-list.png)
 
 ## Definition
 Linked list is a chain of nodes that is linked together.

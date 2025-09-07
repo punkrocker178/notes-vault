@@ -8,4 +8,4 @@ Dependency providers:
 - `useValue`
 
 Hierarchical injectors:
-![Angular-hierachical-injectors](/img/hierarchical-injectors.png)
+![Angular-hierachical-injectors](https://raw.githubusercontent.com/punkrocker178/notes-vault/refs/heads/main/img/hierarchical-injectors.png)
