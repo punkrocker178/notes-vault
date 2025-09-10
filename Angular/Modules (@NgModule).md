@@ -60,7 +60,11 @@ import {NgModule, ModuleWithProviders} from "@angular/core";
 import {AuthenticationService} from "./authentication.service";
 
 @NgModule({
-	//...
+	providers: [
+		DataService,
+		ThemeService,
+		// AuthenticationService <-- If not removed, AuthenticationService is not singleton anymore
+	]
 })
 export class SharedModule {
 	static forRoot(): ModuleWithProviders {
@@ -71,7 +75,7 @@ export class SharedModule {
 	}
 }
 ```
-By removing the `providers: [AuthenticationService]` in the `NgModule` metadata and return `ModuleWithProviders` we have told Angular to provide the `AuthenticationService` of the root level to `SharedModule`
+By removing the `AuthenticationService` from the `providers` in the `NgModule` metadata and return `ModuleWithProviders`, we have told Angular to provide the `AuthenticationService` of the root level to `SharedModule`
 
 ### Use case of `forChild`
 Suppose we have a UI module and at a specific component down the copmonent tree, we want to have a different configuration compared to the root.
