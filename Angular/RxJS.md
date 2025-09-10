@@ -1,5 +1,5 @@
 #tools
-### Observables
+## **Observables**
 > An Observable is a Producer of multiple values, "pushing" them to Observers (Consumers).
 
 ```typescript
@@ -35,7 +35,21 @@ const observer = {
 
 observable.subscribe(observer);
 ```
-### Subjects
+
+## **Observer**
+Observer is a comsumer that receive values delivered by `Observables`. In short, it is a set of callbacks that has 3 type of notification `next`, `error`, `complete`
+```typescript
+const observer = {
+  next: x => console.log('Observer got a next value: ' + x),
+  error: err => console.error('Observer got an error: ' + err),
+  complete: () => console.log('Observer got a complete notification'),
+};
+
+// Usage
+observable.subscribe(observer);
+```
+
+## **Subjects**
 > An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers.
 > While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
@@ -66,7 +80,7 @@ observable.subscribe(subject); // You can subscribe providing a Subject
 // observerA: 3
 // observerB: 3
 ```
-### Operators
+## **Operators**
 #### Transformation
 - `concatMap`
 - `switchMap`
