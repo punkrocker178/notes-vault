@@ -12,7 +12,18 @@ At a high level, migrations function in the following way:
 - When a data model change is introduced, the developer uses EF Core tools to add a corresponding migration describing the updates necessary to keep the database schema in sync. EF Core compares the current model against a snapshot of the old model to determine the differences, and generates migration source files; the files can be tracked in your project's source control like any other source file.
 - Once a new migration has been generated, it can be applied to a database in various ways. EF Core records all applied migrations in a special history table, allowing it to know which migrations have been applied and which haven't.
 
-## Seed the database
+## **Usage**
+1. **Add migration**
+```bash
+dotnet ef database migrations add MigrationName --context ContextClass
+```
+
+2. **Update database**
+```bash
+dotnet ef database update --context ContextClass
+```
+
+## **Seed the database**
 Create the DB first if it doesn't exist
 
 ```csharp
@@ -28,6 +39,8 @@ using (var scope = app.Services.CreateScope())
 ```
 
 `EnsureCreated()` only create an empty database. We need to seed it with data.
+
+To initialize the database, we can create a static method and provide a context to connect to the DB.
 ```csharp
 // Data/DbInitializer.cs
 using ContosoUniversity.Models;
