@@ -1,6 +1,6 @@
 > ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern web apps using [.NET](https://learn.microsoft.com/en-us/dotnet/core/introduction).
 
-Key features:
+# Key features:
 - Lightweight and modular HTTP request pipeline.
 - [Kestrel](https://learn.microsoft.com/vi-vn/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-9.0): A [high-performance](https://github.com/aspnet/benchmarks) and cross-platform HTTP server.
 - Integrated [dependency injection](https://learn.microsoft.com/vi-vn/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-9.0).

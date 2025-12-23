@@ -1,4 +1,4 @@
-# Comparison with Angular
+# Syntax
 - `<RouterView>` is similar to `<router-outlet>`
 - Text interpolation: Same `{{ //JavaScript code here }}`
 - Binding Vue attribute: `v-bind:attribute`. Shorthand: `:attribute`. In Angular we just need square brackets `[attribute]` for Angular to bind
@@ -8,29 +8,6 @@
 - `ref()` and `computed()` are similar to Angular Signals. These are reactive getter/setter method that wrap around a value. Vue is able to track this value and update DOM automatically. To listening for `ref` value changes for side effects, we can use `watch` or `watchEffect`
 - Form binding: using `reactive()` to create a reactive object, then bind to forms by using `v-model` directive
 
-# Single file components
-Vue components file format is `*.vue`. It encapsulates, JavaScript, HTML (template) and styles
-
-Ex:
-```vue
-<script setup>
- import { ref } from 'vue' 
- const count = ref(0)
-</script>
-
-<template>
-  <button @click="count++">Count is: {{ count }}</button>
-</template>
-
-<style scoped> button { font-weight: bold; } </style>
-```
-
-## API Styles
-### 1. Option API
-Logic is defined as an object containing: `data`, `methods`, `mounted`
-### 2. Composition API
-Use `<script setup>` to wrap around JavaScript/Typescript code.
-> The `setup` attribute is a hint that makes Vue perform compile-time transforms that allow us to use Composition API with less boilerplate.
 
 # Application bootstraping
 App bootstrap is similar to React

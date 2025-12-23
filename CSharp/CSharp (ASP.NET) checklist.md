@@ -1,8 +1,8 @@
 _Reference: Qwen3-32B model_
-### **1. C# Fundamentals**
+# **1. C# Fundamentals**
 Focus on core language features and OOP principles, which are commonly tested in interviews.
-#### **Key Topics to Master:**
 
+## **Key Topics to Master:**
 - **Object-Oriented Programming (OOP):**
   - Classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
   - Example: Explain the difference between **abstract classes** and **interfaces**.
@@ -25,7 +25,7 @@ Focus on core language features and OOP principles, which are commonly tested in
   - `Func<T>`, `Action<T>`, and event-driven programming.
   - Example: How do you implement an event in C#?
 
-#### **Common Interview Questions:**
+## **Common Interview Questions:**
 - What is the difference between **`string`** and **`StringBuilder`**?
 - Explain **boxing** and **unboxing** in C#.
 - What is the purpose of **`readonly`** in C#?
@@ -33,11 +33,10 @@ Focus on core language features and OOP principles, which are commonly tested in
 
 ---
 
-### **2. ASP.NET Core**
+# **2. ASP.NET Core**
 ASP.NET Core is the primary framework for building backend services in .NET. Focus on key concepts and best practices.
 
-#### **Key Topics to Master:**
-
+## **Key Topics to Master:**
 - **MVC Architecture:**
   - Controllers, actions, views, and Razor syntax.
   - Example: How does ASP.NET Core handle routing?
@@ -60,7 +59,7 @@ ASP.NET Core is the primary framework for building backend services in .NET. Foc
   - Caching (`IMemoryCache`, `IDistributedCache`).
   - Minification and bundling of static files.
 
-#### **Common Interview Questions:**
+## **Common Interview Questions:**
 - What is the difference between **ASP.NET Core** and **classic ASP.NET**?
 - How does **dependency injection** work in ASP.NET Core?
 - Explain the **middleware pipeline** in ASP.NET Core.
@@ -68,11 +67,10 @@ ASP.NET Core is the primary framework for building backend services in .NET. Foc
 
 ---
 
-### **3. Entity Framework Core (EF Core)**
+# **3. Entity Framework Core (EF Core)**
 EF Core is the ORM (Object-Relational Mapper) for .NET. Be prepared to discuss its features and best practices.
 
-#### **Key Topics to Master:**
-
+## **Key Topics to Master:**
 - **Entity Classes and DbContext:**
   - Mapping entities to database tables.
   - Example: How do you configure a one-to-many relationship using Fluent API?
@@ -90,8 +88,7 @@ EF Core is the ORM (Object-Relational Mapper) for .NET. Be prepared to discuss i
 - **Performance Tips:**
   - Avoiding N+1 queries with `Include()` and `Select()`.
 
-#### **Common Interview Questions:**
-
+## **Common Interview Questions:**
 - What is the difference between **Entity Framework** and **Entity Framework Core**?
 - How do you handle **many-to-many relationships** in EF Core?
 - What is **change tracking** in EF Core?
@@ -99,12 +96,11 @@ EF Core is the ORM (Object-Relational Mapper) for .NET. Be prepared to discuss i
 
 ---
 
-### **4. Advanced C# and .NET Concepts**
+# **4. Advanced C# and .NET Concepts**
 
 Be ready to discuss advanced topics and modern practices.
 
-#### **Key Topics:**
-
+## **Key Topics:**
 - **async/await and Task-based Asynchronous Programming:**
   - Avoid blocking threads with `ConfigureAwait(false)`.
   - Example: How do you handle exceptions in `async` methods?
@@ -124,8 +120,7 @@ Be ready to discuss advanced topics and modern practices.
 - **.NET 6/7 Features (if applicable):**
   - Minimal APIs, **Blazor**, **gRPC**, and **ASP.NET Core Hosting Models**.
 
-#### **Common Interview Questions:**
-
+## **Common Interview Questions:**
 - What is **`ConfigureAwait(false)`** and when should it be used?
 - How does **garbage collection** work in .NET?
 - What is the difference between **`IEnumerable<T>`** and **`IQueryable<T>`**?
@@ -133,12 +128,11 @@ Be ready to discuss advanced topics and modern practices.
 
 ---
 
-### **5. System Design and Architecture**
+# **5. System Design and Architecture**
 
 Full-stack engineers often need to design scalable and maintainable systems. Be prepared to discuss:
 
-#### **Key Topics:**
-
+## **Key Topics:**
 - **RESTful API Design:**
   - HTTP methods, status codes, and resource naming.
 
@@ -157,8 +151,7 @@ Full-stack engineers often need to design scalable and maintainable systems. Be 
 - **Scalability and Microservices:**
   - Horizontal scaling, load balancing, and API gateways.
 
-#### **Common Interview Questions:**
-
+## **Common Interview Questions:**
 - How would you design a **RESTful API** for a social media platform?
 - What are the **trade-offs** between **monolithic** and **microservices** architecture?
 - How do you handle **high traffic** in an ASP.NET Core application?
@@ -166,37 +159,27 @@ Full-stack engineers often need to design scalable and maintainable systems. Be 
 
 ---
 
-### **6. Practical Tips for the Interview**
-
+# **6. Practical Tips for the Interview**
 - **Practice Coding Challenges:**
   - Use platforms like **LeetCode**, **HackerRank**, or **CodinGame** to solve C#-specific problems.
-
 - **Whiteboard or Code on a Shared Screen:**
   - Explain your thought process step-by-step.
-
 - **Ask Clarifying Questions:**
   - If the problem is ambiguous, ask for examples or constraints.
-
 - **Discuss Trade-offs:**
   - For example, when choosing between `List<T>` and `Dictionary<TKey, TValue>`, explain the pros and cons.
-
 - **Know the Latest .NET Features:**
   - Be familiar with **.NET 6/7** features like **Minimal APIs**, **gRPC**, and **Blazor**.
 
 ---
 
-### **7. Resources to Prepare**
-
+# **7. Resources to Prepare**
 - **Books:**
   - *"Pro ASP.NET Core 6"* by Adam Freeman.
   - *"C# in Depth"* by Jon Skeet.
-
 - **Documentation:**
   - [Microsoft Docs: ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/)
   - [Microsoft Docs: Entity Framework Core](https://docs.microsoft.com/en-us/ef/)
-
 - **YouTube Channels:**
   - [Mosh](https://www.youtube.com/c/MoshHamedani)
   - [IAmTimCorey](https://www.youtube.com/c/IAmTimCorey)
-
----
