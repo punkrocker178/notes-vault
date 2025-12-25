@@ -44,7 +44,7 @@ export class DashboardComponent {
 ### Injectable() Decorrator
 >Decorator that marks a class as available to be provided and injected as a dependency.
 
-```
+```typescript
 @Injectable({ 
   providedIn?: Type<any> | "root" | "platform" | "any" | null | undefined;
 })

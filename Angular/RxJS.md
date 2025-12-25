@@ -1,5 +1,5 @@
 #tools
-## **Observables**
+# Observables
 > An Observable is a Producer of multiple values, "pushing" them to Observers (Consumers).
 
 ```typescript
@@ -59,7 +59,7 @@ There are 4 types of Subjects:
 - `ReplaySubject`: Can replay old values to new subscriber, can specify how many records to replay. 
 - `AsyncSubject`: Similar to `last()` operator, it waits for `complete()` notification inorder to deliver a value.
 
-#### `Subject` as Observer
+### `Subject` as Observer
 ```typescript
 const subject = new Subject<number>();
 subject.subscribe({
@@ -80,25 +80,25 @@ observable.subscribe(subject); // You can subscribe providing a Subject
 // observerA: 3
 // observerB: 3
 ```
-## **Operators**
-#### Transformation
+## Operators
+### Transformation
 - `concatMap`
 - `switchMap`
 - `mergeMap`
 
-#### Combination
+### Combination
 - `combineLatest`
 - `pairwise`
 - `withLatestFrom`
 - `startWith`
 
-#### Creation
+### Creation
 - `of`
 - `timer`
 - `from`
 - `fromEvent`
 
-#### Filter
+### Filter
 - `take`
 - `takeUntil`
 - `filter`
@@ -107,7 +107,7 @@ observable.subscribe(subject); // You can subscribe providing a Subject
 - `auditTime`
 - `skip`
 
-#### Utility
+### Utility
 - `tap`
 - `delay`
 - `finalize`

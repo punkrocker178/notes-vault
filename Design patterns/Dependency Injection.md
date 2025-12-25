@@ -5,8 +5,6 @@ This means:
 - Instead, those dependencies are **"injected"** into it—typically via constructors, setters, or interfaces.
 
 For example:
-
-
 ```java
 class Car {
   private Engine engine;
