@@ -1,4 +1,4 @@
-## Component:
+# Component:
 
 Components are the base building blocks of the application. It's a place where you can define logic and template altogether that can be reusable in the app. 
 Each component consists of:
@@ -28,7 +28,7 @@ Example:
 })
 ```
 
-## Directives
+# Directives
 
 Compared to a `component`, `directive` is a class that can modify the behavior of an HTML element or a `component`.
 `directive` apply directly to an element so we don't need to declare a template for it.  
@@ -42,7 +42,7 @@ Most popular `directives` are:
 
 The API lets you apply directives to a component's host element from _within_ the component TypeScript class.
 
-## Pipes
+# Pipes
 
 Pipes are special functions that are used in HTML templates to transform/modify display values.
 Pipes can be chained together to output the desired value.
@@ -55,7 +55,7 @@ Usage:
 <span>{{ totalValue | currency }} <!-- Transform number in to currency string -->
 ```
 
-#### Built-in pipes
+## Built-in pipes
 | Name                                                              | Description                                                                                   |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [`AsyncPipe`](https://angular.dev/api/common/AsyncPipe)           | Read the value from a `Promise` or an RxJS `Observable`.                                      |
@@ -72,7 +72,7 @@ Usage:
 | [`TitleCasePipe`](https://angular.dev/api/common/TitleCasePipe)   | Transforms text to title case.                                                                |
 | [`UpperCasePipe`](https://angular.dev/api/common/UpperCasePipe)   | Transforms text to all upper case.                                                            |
 
-#### Custom pipes
+## Custom pipes
 
 A pipe must have two things:
 
@@ -92,15 +92,15 @@ export class KebabCasePipe implements PipeTransform {
 }
 ```
 
-## Services
+# Services
 Services are a class that have `@Injector()` decorator so it can be injected in components.
 Services can be used to call API or to hold application logic and state.
 [[Services]]
 
-## Input
+# Input
 ![Input data flow diagram of data flowing from parent to child](https://v17.angular.io/generated/images/guide/inputs-outputs/input.svg)
 We can pass data to child component using inputs. Angular now has 3 types of input
-### @Input
+## @Input
 We can declare an input in a child component that data can be passed in.
 By using `ngOnChanges()` lifecycle, we can get the latest value each time the input changes.
 ```Typescript
@@ -113,7 +113,7 @@ export class CustomCheckbox {
 	}
 }
 ```
-### Signal input
+## Signal input
 Serve the same purposes as the original @Input, but with the benefit of signals. 
 [Why should we use signal inputs and not `@Input()`?](https://v18.angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input)
 - Type safe
@@ -129,7 +129,7 @@ export class CustomCheckbox {
 	disabled = input.required(false);
 }
 ```
-### Model input 
+## Model input 
 [Model inputs • Angular](https://v18.angular.dev/guide/signals/model)
 **Model inputs** are a special type of input that enable a component to write new values back to parent component.
 ```Typescript
@@ -174,17 +174,17 @@ A function based `output` doesn't rely `EventEmitter` but still have the same fu
 - **Simpler API**: No longer use `EventEmitter` which inherit from RxJs `Subject` class. # `OutputEmitterRef` only has 2 methods `subscribe()` and `emit()`
 - **Less boilerplate code**: declaration is now shorter than `@Ouput` decorator
 
-## Resolvers
+# Resolvers
 Class based or function based resolvers provide data to a route before navigation.  
 [[Resolvers]]
 
-## Guards
+# Guards
 Functions to check whether route is allowed to navigate or not.  
 [[Guards]]
 
-## Routing
+# Routing
 Is a module or config function to let user add routing config to application.  
 [[Angular Routing]]
 
-## Modules (NgModule)
+# Modules (NgModule)
 [[Modules (@NgModule)]]

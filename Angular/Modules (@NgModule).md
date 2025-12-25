@@ -1,6 +1,6 @@
 Used to be the most frustrating aspect in Angular. Due to the steep learning curve, Angular now recommends using standalone components from V18
 
-## What is Angular Module
+# Angular Module Definition
 Module is a subset of Angular components, services, directives, pipes, modules, ...etc combined altogether to become your application. 
 
 >An NgModule has two main responsibilities:

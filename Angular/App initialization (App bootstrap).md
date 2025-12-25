@@ -1,6 +1,6 @@
 App intialization is configured in `main.ts`
 Since standalone component is a thing now, so there are 2 ways to intialize an Angular application
-#### Bootstrap module
+# Bootstrap module
 
 My prefered method, using this method, we have to declare `AppModule` with some basic imports and declare which component to be bootstraped
 ```typescript
@@ -23,7 +23,8 @@ export class AppModule { }
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 ```
-#### Bootstrap standalone component
+
+# Bootstrap standalone component
 This method skip the Application module declaration, therefore reducing boiler plate code.
 
 The root component to be bootstraped must be `standalone: true`

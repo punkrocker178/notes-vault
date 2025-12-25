@@ -1,3 +1,4 @@
+# Change Detection in Angular
 A mechanism that check all components properties for changes and updating the view(DOM) after an async tasks or browser APIs call.
 There are 2 change detection strategies:
 - **Default:** Checks all components and their bindings after any event or async operation.

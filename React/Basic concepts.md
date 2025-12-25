@@ -1,4 +1,4 @@
-## **Components**
+# Components
 Components are function based. Can be exported to be used in other components.
 
 ```jsx
@@ -16,7 +16,7 @@ export function TodoItem() {
 }
 ```
 
-### Passing props
+## Passing props
 States declared in parent component can be pass to child component to share data is called `props`.
 We pass `props` similar to HTML `attributes`
 
@@ -30,7 +30,7 @@ export const TodoList = () => {
 	);
 }
 ```
-#### Declaring props
+## Declaring props
 In order for child component to read `props`, it has to be declared.
 
 ```jsx

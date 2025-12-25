@@ -1,5 +1,6 @@
+# Configuration file
 See more: https://angular.io/guide/workspace-config
-# angular.json
+## angular.json
 Sample file
 ```json
 {
@@ -137,5 +138,5 @@ Sample file
   }
 }
 ```
-# tsconfig.json
-Learn more [Angular - TypeScript configuration](https://angular.io/guide/typescript-configuration)
+## tsconfig.json
+This file is required for enabling TypeScript in any project. Learn more [Angular - TypeScript configuration](https://angular.io/guide/typescript-configuration)

@@ -1,9 +1,11 @@
 #tools 
+# Angular Signals
+
 Based on [SolidJs Signals]([Basics - Solid Docs](https://docs.solidjs.com/concepts/intro-to-reactivity#signals)) to apply reactivity programming. This programming paradigm refers to a system's ability to respond to changes in state automatically.
 
 A `signal` is a wrapper function around a value, changes to value are tracked and notified to consumers automatically while maintaining synchronous programming. 
 
-## **Writable signals**
+## Writable signals
 To create a writable signals, call `signal` API with intial value. Without initial value it will be a readonly `signal`
 ```typescript
 // Signals are getter functions - calling them reads their value.
@@ -11,7 +13,7 @@ const count = signal(0);
 console.log('The count is: ' + count());
 ```
 
-## **Computed signals**
+## Computed signals
 Use `computed` API to create `signal` based on other `signal`. Created `signal` will be updated when other `signal` changes.
 
 **Key features:**
@@ -53,7 +55,7 @@ const conditionalCount = computed(() => {
 If `showCount` is false, `count` is not a dependency of `conditionalCount`. Unable to read `count` value.  
 If `showCount` is true, `count` is a dependency of `conditionalCount`. Calling `conditionalCount()` again, we will see `count` value.
 
-## **Effects**
+## Effects
 >  An **effect** is an operation that runs whenever one or more signal values change
 
 Effects always run **at least once.** When an effect runs, it tracks any signal value reads. Whenever any of these signal values change, the effect runs again.
@@ -72,7 +74,7 @@ constructor() {
 }
 ```
 
-### **Use cases:**
+### Use cases:
 Effects are rarely needed in most application code, but may be useful in specific circumstances. Here are some examples:
 - Logging data (analytics or debugging).
 - Sync data with `window.localStorage`.
