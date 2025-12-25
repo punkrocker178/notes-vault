@@ -13,6 +13,6 @@ jobs:
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.TOKEN }}" \
             https://api.github.com/repos/punkrocker178/notes-ssg/dispatches \
             -d '{"event_type":"notes-vault-updated"}'
