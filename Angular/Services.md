@@ -2,7 +2,7 @@
 
 ```typescript
 // hero.service.ts
-@Inject()
+@Injectable()
 export class HeroService {
   private heroes: Hero[] = [];
 
@@ -50,8 +50,8 @@ export class DashboardComponent {
 })
 ```
 `providedIn` values are:
-- 'root': The application-level injector. A singleton instance that is available in the entire application
-- 'platform':  _A special singleton platform injector shared by all applications on the page_. Which is useful when sharing a single service instance across [Angular Elements]([Custom Elements • Angular](https://angular.dev/guide/elements))
+- `root`: The application-level injector. A singleton instance that is available in the entire application
+- `platform`:  _A special singleton platform injector shared by all applications on the page_. Which is useful when sharing a single service instance across [Angular Elements]([Custom Elements • Angular](https://angular.dev/guide/elements))
 
 > Is the part of the Angular framework that provides components with access to services and other resources. Angular provides the ability for you to _inject_ a service into a component to give that component access to the service
 

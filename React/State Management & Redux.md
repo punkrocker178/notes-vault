@@ -1,3 +1,4 @@
+#AI_content 
 # State Management
 ## Why
 As applications grow overtime, data often needs to be shared between components that aren't directly related in the component tree.

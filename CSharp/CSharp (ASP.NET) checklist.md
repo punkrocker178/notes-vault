@@ -1,3 +1,4 @@
+#AI_content
 _Reference: Qwen3-32B model_
 # **1. C# Fundamentals**
 Focus on core language features and OOP principles, which are commonly tested in interviews.
