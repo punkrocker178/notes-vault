@@ -1,5 +1,4 @@
 # Component:
-
 Components are the base building blocks of the application. It's a place where you can define logic and template altogether that can be reusable in the app. 
 Each component consists of:
 
@@ -29,7 +28,6 @@ Example:
 ```
 
 # Directives
-
 Compared to a `component`, `directive` is a class that can modify the behavior of an HTML element or a `component`.
 `directive` apply directly to an element so we don't need to declare a template for it.  
 `directive` also implements lifecycle methods same as a `component`
@@ -38,12 +36,11 @@ Most popular `directives` are:
 - Structural directives: `*ngIf`, `*ngFor`
 - Attribute directives: `ngClass`, `ngModel`
 
-### Directive composition API (Angular 15) [Docs]([Angular - Directive composition API](https://angular.io/guide/directive-composition-api#directive-composition-api))
-
+### Directive composition API (Angular 15) 
 The API lets you apply directives to a component's host element from _within_ the component TypeScript class.
+[See Directive composition API Docs](https://angular.io/guide/directive-composition-api#directive-composition-api)
 
 # Pipes
-
 Pipes are special functions that are used in HTML templates to transform/modify display values.
 Pipes can be chained together to output the desired value.
 By using pipes, you have increased the reusability of the code base by declaring the transformation function once. So it can be used across many templates.
@@ -73,7 +70,6 @@ Usage:
 | [`UpperCasePipe`](https://angular.dev/api/common/UpperCasePipe)   | Transforms text to all upper case.                                                            |
 
 ## Custom pipes
-
 A pipe must have two things:
 
 - A name, specified in the pipe decorator
@@ -100,6 +96,7 @@ Services can be used to call API or to hold application logic and state.
 # Input
 ![Input data flow diagram of data flowing from parent to child](https://v17.angular.io/generated/images/guide/inputs-outputs/input.svg)
 We can pass data to child component using inputs. Angular now has 3 types of input
+
 ## @Input
 We can declare an input in a child component that data can be passed in.
 By using `ngOnChanges()` lifecycle, we can get the latest value each time the input changes.
@@ -113,6 +110,7 @@ export class CustomCheckbox {
 	}
 }
 ```
+
 ## Signal input
 Serve the same purposes as the original @Input, but with the benefit of signals. 
 [Why should we use signal inputs and not `@Input()`?](https://v18.angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input)
@@ -129,6 +127,7 @@ export class CustomCheckbox {
 	disabled = input.required(false);
 }
 ```
+
 ## Model input 
 [Model inputs • Angular](https://v18.angular.dev/guide/signals/model)
 **Model inputs** are a special type of input that enable a component to write new values back to parent component.
@@ -141,10 +140,11 @@ export class CustomCheckbox {
 }
 ```
 
-## Output
+# Output
 ![Output diagram of the data flow going from child to parent](https://v17.angular.io/generated/images/guide/inputs-outputs/output.svg)
 The usage of Output is for notify changes happenning in child component to the parent component
-### @Output
+
+## @Output
 Takes an `EventEmiiter` then emit that event to the parent component
 ```typescript
 import { Output, EventEmitter } from '@angular/core';
@@ -166,7 +166,7 @@ After we instantiate `newItemEvent` EventEmitter. We can now use `emit()` method
 The emitted event in child component will go through parent component handler function `handleEvent` with the `$event` argument as the value we have emitted.
 `(newItemEvent)` must be the same with the one declared with `@Output`
 
-### Output function
+## Output function
 A function based `output` doesn't rely `EventEmitter` but still have the same functionality as `@Output` decorator. Angular now reccomends using `output` function instead of `@Ouput`:
 - **Consistent with new APIs**: Aligns with other function based APIs `input()` and `model()` signals, thus increase the typing/developer experience
 - **Type safe**: Stricter type compared to `EventEmitter`. 

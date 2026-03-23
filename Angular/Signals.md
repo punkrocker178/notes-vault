@@ -17,7 +17,7 @@ console.log('The count is: ' + count());
 Use `computed` API to create `signal` based on other `signal`. Created `signal` will be updated when other `signal` changes.
 
 **Key features:**
-- Lazy evaluation: Computation doesn't run intil dependencies change. See [[#Computed signals#**Example 3 ** `computed` signal dependencies are dynamic| Example 3]] 
+- Lazy evaluation: Computation doesn't run until dependencies change. See [[#Computed signals#**Example 3 ** `computed` signal dependencies are dynamic| Example 3]] 
 - Memoization: Values from `computed` are cached and memoized until dependencies change.
 
 **Note:** `computed` signals are readonly
